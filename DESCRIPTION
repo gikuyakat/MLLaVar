@@ -1,0 +1,10 @@
+Package: MLLaVar
+Type: Package
+Title: Support MLSEM by using lavaan package
+Version: 0.22
+Date: 2015-10-21
+Author: Takayuki Goto
+Maintainer: Takayuki Goto <g.ikuyakat@gmail.com>
+Description: Support MLSEM by using lavaan package (beta)
+License: GPL
+Imports: lavaan, semPlot, maptools
