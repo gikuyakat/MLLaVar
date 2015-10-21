@@ -68,12 +68,12 @@ mllavar <- function(rowmat, sub=NULL, unimodel=NULL, bimodel=NULL, fig=FALSE, ve
 
   modeltext <- sprintf("%s\n %s\n %s", bwtext, bitext, unitext)
 
-  mlsemres <- lavaan(modeltext, sample.cov=mats, int.lv.free=F,
+  mlsemres <- lavaan::lavaan(modeltext, sample.cov=mats, int.lv.free=F,
                      sample.nobs=nob, mimic="EQS", se="standard", verbose=verbose, likelihood = "wishart")
 
   if(fig==TRUE){
     par(mfrow=c(1,2))
-    semPaths(mlsemres, "par", fade=F)
+    semPlot::semPaths(mlsemres, "par", fade=F)
   }
   cat("\n***CAUTION: PLEASE CHECK AND COMPARE RESULTS BY OTHER SOFTWARES***\n")
 
@@ -108,7 +108,7 @@ mllavar <- function(rowmat, sub=NULL, unimodel=NULL, bimodel=NULL, fig=FALSE, ve
 
   nvarw <- ncol(estw2)*(ncol(estw2)+1)/2
   nvarb <- ncol(estb2)*(ncol(estb2)+1)/2
-  npar2 <- fitMeasures(mlsemres, "npar")-(length(minusw)+length(minusb))
+  npar2 <- lavaan::fitMeasures(mlsemres, "npar")-(length(minusw)+length(minusb))
   df2 <- (nvarw + nvarb)-npar2
 
   FMLb <- (log(det(estw + omega3*estb)) + sum(diag(solve(estw + omega3*estb) %*% covb2))-

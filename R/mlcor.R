@@ -87,7 +87,7 @@ mlcor <- function(x,y,g,fig=F){
     par(mfrow=c(1,2))
     if(var(xmym[,1])!=0 & var(xmym[,2])!=0){
       plot(xmym[,1],xmym[,2],main="between")
-      pointLabel(xmym[,1], xmym[,2], labels=rownames(xmym), col="#000080", cex=0.6)
+      maptools::pointLabel(xmym[,1], xmym[,2], labels=rownames(xmym), col="#000080", cex=0.6)
     }else{
       plot(matA$x,matA$y,type="n",main="between")
     }

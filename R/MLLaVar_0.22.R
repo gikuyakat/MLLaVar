@@ -4,5 +4,4 @@
 #'
 #' @name MLLaVar
 #' @docType package
-#' @import lavaan semPlot maptools
 NULL
