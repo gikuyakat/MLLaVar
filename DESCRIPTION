@@ -7,5 +7,5 @@ Author: Takayuki Goto
 Maintainer: Takayuki Goto <g.ikuyakat@gmail.com>
 Description: Support MLSEM by using lavaan package (beta)
 License: GPL
-Depends: lavaan, semPlot, maptools
+Depends: lavaan, maptools
 LazyData: true

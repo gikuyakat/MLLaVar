@@ -73,7 +73,7 @@ mllavar <- function(rowmat, sub=NULL, unimodel=NULL, bimodel=NULL, fig=FALSE, ve
 
   if(fig==TRUE){
     par(mfrow=c(1,2))
-    semPlot::semPaths(mlsemres, "par", fade=F)
+    #semPlot::semPaths(mlsemres, "par", fade=F)
   }
   cat("\n***CAUTION: PLEASE CHECK AND COMPARE RESULTS BY OTHER SOFTWARES***\n")
 
